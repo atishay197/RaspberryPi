@@ -25,8 +25,25 @@ def heart():
     device.pixel(3,6,1,redraw=True)
     device.pixel(4,6,1,redraw=True)
 
-device.orientation(90)
+device.letter(0,ord('I'),SINCLAIR_FONT)
+time.sleep(1)
+device.clear();
 
 heart()
-time.sleep(100)
+
+for times in range (4):
+    for b in range (0,16,2):
+        device.brightness(b)
+        time.sleep(0.07)
+time.sleep(1)
 device.clear()
+
+device.letter(0,ord('U'),SINCLAIR_FONT)
+time.sleep(1)
+device.clear();
+device.show_message("Insert_Name")
+time.sleep(1)
+device.clear();
+
+
+    
